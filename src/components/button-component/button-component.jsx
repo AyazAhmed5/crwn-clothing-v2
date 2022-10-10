@@ -13,7 +13,6 @@ const Button = ({ children, buttonType, ...otherProps }) => {
       {...otherProps}
     >
       {children}
-      {console.log(children)}
     </button>
   );
 };
