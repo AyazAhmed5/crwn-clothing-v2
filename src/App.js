@@ -4,7 +4,7 @@ import Home from "./Routes/home/home.component.jsx";
 import Authentication from "./Routes/authentication/authentication.component.jsx";
 import Navigation from "./Routes/navigation/navigation.component.jsx";
 import Shop from "./components/shop-component/shop.component";
-import Checkout from "./components/checkout/checkout.component.jsx";
+import Checkout from "./Routes/checkout/checkout.component";
 
 const App = () => {
   return (
