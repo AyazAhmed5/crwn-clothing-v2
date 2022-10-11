@@ -1,4 +1,5 @@
 import { useContext } from "react";
+<<<<<<< HEAD
 import { CartContext } from "../../contexts/cartContext";
 
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
@@ -6,6 +7,16 @@ import "./checkout.styles.scss";
 
 const Checkout = () => {
   const { cartItems, cartTotal } = useContext(CartContext);
+=======
+import CheckoutItem from "../../components/checkout-item/checkout-item.component";
+
+import { CartContext } from "../../contexts/cartContext";
+
+import "./checkout.styles.scss";
+
+const Checkout = () => {
+  const { cartItems, totalCount } = useContext(CartContext);
+>>>>>>> test2
 
   return (
     <div className="checkout-container">
@@ -26,6 +37,7 @@ const Checkout = () => {
           <span>Remove</span>
         </div>
       </div>
+<<<<<<< HEAD
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
@@ -33,4 +45,14 @@ const Checkout = () => {
     </div>
   );
 };
+=======
+      {cartItems.map((cartItem) => {
+        return <CheckoutItem key={cartItem.id} cartItem={cartItem} />;
+      })}
+      <span className="total">Total: ${totalCount}</span>
+    </div>
+  );
+};
+
+>>>>>>> test2
 export default Checkout;

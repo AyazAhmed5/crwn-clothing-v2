@@ -38,6 +38,10 @@ const Navigation = () => {
           )}
           <CartIcon />
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> test2
         {isCartOpen && <CartDropdown />}
       </div>
       <Outlet />
