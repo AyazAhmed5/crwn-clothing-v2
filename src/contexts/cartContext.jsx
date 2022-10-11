@@ -68,7 +68,6 @@ export const CartContextProvider = ({ children }) => {
   }, [cartItems]);
 
   const addItemToCart = (productToAdd) => {
-    console.log(productToAdd);
     setCartItems(addCartItem(cartItems, productToAdd));
   };
   const removeItemToCart = (cartItemToRemove) => {
