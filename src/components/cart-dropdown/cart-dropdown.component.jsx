@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/cartContext";
 import CartItem from "../cart-item/cart-item.component";
 
-import "./cart-dropdown.styles.scss";
+import { CartDropdownContainer, CartItems } from "./cart-dropdown.styles";
 
 const CartDropdown = () => {
   const { cartItems, setIsCartOpen, isCartOpen } = useContext(CartContext);
@@ -14,14 +14,14 @@ const CartDropdown = () => {
     navigate("/checkout");
   };
   return (
-    <div className="cart-dropdown-container">
-      <div className="cart-items">
+    <CartDropdownContainer>
+      <CartItems>
         {cartItems.map((item) => (
           <CartItem key={item.id} item={item} />
         ))}
-      </div>
+      </CartItems>
       <Button onClick={goToCheckoutHandler}>Go to Checkout</Button>
-    </div>
+    </CartDropdownContainer>
   );
 };
 export default CartDropdown;
