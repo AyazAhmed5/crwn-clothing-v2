@@ -13,13 +13,17 @@ const Category = () => {
     setProducts(categoriesMap[category]);
   }, [categoriesMap, category]);
 
+  // console.log(product);
   return (
-    <div className="category-container">
-      {products &&
-        products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-    </div>
+    <>
+      <h2 className="title">{category.toLocaleUpperCase()}</h2>
+      <div className="category-container">
+        {products &&
+          products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+      </div>
+    </>
   );
 };
 export default Category;
