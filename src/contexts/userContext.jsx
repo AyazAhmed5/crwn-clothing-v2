@@ -10,8 +10,6 @@ export const UserContext = createContext({
   setCurrentUser: () => null,
 });
 const userReducer = (state, action) => {
-  console.log("dispatched");
-  console.log(action);
   const { type, payload } = action;
 
   switch (type) {
