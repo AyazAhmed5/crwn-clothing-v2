@@ -29,7 +29,7 @@ const CheckoutItem = ({ cartItem }) => {
   return (
     <CheckoutItemContainer>
       <ImageContainer>
-        <Image src={imageUrl} />
+        <Image src={imageUrl} alt="Checkout-item-Image" />
       </ImageContainer>
       <Name>{name}</Name>
       <Quantity>
