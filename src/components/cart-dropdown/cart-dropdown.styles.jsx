@@ -6,6 +6,7 @@ export const CartDropdownContainer = styled.div`
   height: 340px;
   display: flex;
   flex-direction: column;
+
   padding: 20px;
   border: 1px solid black;
   background-color: white;
@@ -17,9 +18,16 @@ export const CartDropdownContainer = styled.div`
     margin-top: auto;
   }
 `;
+export const EmptyMessage = styled.span`
+  display: flex;
+  font-size: 18px;
+  font-weight: bolder;
+  margin: 50px auto;
+`;
 export const CartItems = styled.div`
   height: 240px;
   display: flex;
   flex-direction: column;
+
   overflow: scroll;
 `;
