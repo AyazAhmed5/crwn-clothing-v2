@@ -1,4 +1,6 @@
-import { createContext, useEffect, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer } from "react";
+
+import { CreateAction } from "../Utils/reducer/reducer.utils";
 import {
   onAuthStateChangedListner,
   createUserDocFromAuth,
@@ -29,11 +31,10 @@ const INITIAL_STATE = {
 };
 
 export const UserProvider = ({ children }) => {
-  // const [currentUser, setCurrentUser] = useState(null);
   const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
 
   const setCurrentUser = (user) => {
-    dispatch({ type: "SET_CURRENT_USER", payload: user });
+    dispatch(CreateAction("SET_CURRENT_USER", user));
   };
 
   useEffect(() => {
