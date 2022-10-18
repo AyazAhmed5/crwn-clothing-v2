@@ -7,7 +7,6 @@ import App from "./App";
 
 import { store } from "./store/store";
 import reportWebVitals from "./reportWebVitals";
-import { CartContextProvider } from "./contexts/cartContext";
 
 import "./index.scss";
 
@@ -16,9 +15,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <CartContextProvider>
-          <App />
-        </CartContextProvider>
+        <App />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>
