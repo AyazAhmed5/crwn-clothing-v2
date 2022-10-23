@@ -14,6 +14,7 @@ import Authentication from "./Routes/authentication/authentication.component.jsx
 import Navigation from "./Routes/navigation/navigation.component.jsx";
 import Shop from "./components/shop-component/shop.component";
 import Checkout from "./Routes/checkout/checkout.component";
+import { GlobalStyle } from "./global-styles";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -28,14 +29,17 @@ const App = () => {
     return unSubscribe;
   }, [dispatch]);
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path="shop/*" element={<Shop />} />
-        <Route path="auth" element={<Authentication />} />
-        <Route path="checkout" element={<Checkout />} />
-      </Route>
-    </Routes>
+    <div>
+      <GlobalStyle />
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="shop/*" element={<Shop />} />
+          <Route path="auth" element={<Authentication />} />
+          <Route path="checkout" element={<Checkout />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };
 export default App;

@@ -8,6 +8,9 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+  @media screen and (max-width: 800px) {
+    justify-content: space-around;
+  }
 `;
 export const ImageContainer = styled.div`
   width: 23%;
@@ -35,6 +38,9 @@ export const Value = styled.span`
   margin: auto;
 `;
 export const RemoveButton = styled.span`
-  padding-left: 80px;
+  padding-left: 30px;
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    padding: unset;
+  }
 `;
